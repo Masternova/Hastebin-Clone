@@ -1,18 +1,26 @@
-create server
+render line numbers
 
-req express
-const app
-app set view engine, ejs
+public dir
+styles sheet
+link styles
+app.use (express.static("public
 
-get /
+body bg color #002b36 
+m = 0
 
-app listen 3000
+.wrapper
+display flex
+padd    1rem .5rem
+font size   1rem
 
-create views dir
--code-display.ejs
+pre
+m =0
 
-render code variable to code display
-wrap in pre/code tags
+#code display
+pt = 0
+pb= 0
 
-link highlistjs style sheet
-make code display normal text
+.line number
+color #7D7D7D
+font fam monospace
+text align end

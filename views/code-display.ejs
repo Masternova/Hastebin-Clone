@@ -20,10 +20,17 @@
     <script>
       hljs.highlightAll();
     </script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>CODE</h1>
-    <pre><code class="language-plaintext"><%= code %> </code></pre>
+    <div class="wrapper">
+      <div class="line-numbers">
+        <% for (let i = 1; i <= code.split('\n').length; i++) { %>
+        <div><%= i %></div>
+        <% } %>
+      </div>
+      <pre><code id= "code-display" class="language-plaintext"><%= code %> </code></pre>
+    </div>
   </body>
 </html>
