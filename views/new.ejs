@@ -15,6 +15,7 @@
   </head>
   <body>
     <form action="/save" method="POST">
+      <%- include("_buttons.ejs") %>
       <div class="wrapper">
         <div class="line-number">&gt;</div>
         <textarea name="value" autofocus><%=locals.value%></textarea>

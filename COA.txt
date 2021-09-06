@@ -1,35 +1,60 @@
-get /new
-render /new
 
-views>new
-remove hightjs style/script
-copy code display to new
+_buttons
+.button-wrapper
+    ahref / .logo Hastebin
+    .buttons
+        button.btn type = submit>save
+ 
+ css
+ .buttons-wrapper
+ pos fixed
+ top 0
+ right 0
+ opacity .15
+ transition opacity 200ms ease in outline
+ bg #0081A2
+ padd 1rem
 
-remove body content
-create form /save POST
-    .wrapper
-        .line-number
-          &gt;
-        textarea autofocus name = value
-        <%=locals.value
+ .buttons-wrapper:hover
+ opacity 1
 
-link autosize.js library
-call autosize(docs)
+ .logo
+ font size 2rem
+ text align center
+ text dec none
+ color white
+ width 100%
+ display inline-block
 
-css
-.textarea
-bg transparent
-resize none
-width 100%
-padd 0
-ml 1rem
-color 7D7D7D
-min-height calc(100vh - 2rem)
-border none
-outline none
+ .logo: hover
+ text-dec underline
 
-git commit
-new view
-_buttons.ejs
+ .buttons {
+     display flex
+     mt .5rem
+     just content center
+ }
 
-in new in form <%- include("_buttons.ejs)
+ .buttons > * + * {
+     ml .25rem
+ }
+
+ .btn
+ cursor pointer
+ bg none
+ border 1px solid #002b36
+ color #002b36
+ border rad .25rem
+ padd .25rem .5rem
+ transition bg color 200ms ease in outline
+display inline-block
+text dec none
+
+ btn hover
+ bgcolor 83e5ff
+
+ _buttons
+ ahref /new .btn>new
+ (submit btn)
+
+ commit
