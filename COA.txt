@@ -1,26 +1,35 @@
-render line numbers
+get /new
+render /new
 
-public dir
-styles sheet
-link styles
-app.use (express.static("public
+views>new
+remove hightjs style/script
+copy code display to new
 
-body bg color #002b36 
-m = 0
+remove body content
+create form /save POST
+    .wrapper
+        .line-number
+          &gt;
+        textarea autofocus name = value
+        <%=locals.value
 
-.wrapper
-display flex
-padd    1rem .5rem
-font size   1rem
+link autosize.js library
+call autosize(docs)
 
-pre
-m =0
+css
+.textarea
+bg transparent
+resize none
+width 100%
+padd 0
+ml 1rem
+color 7D7D7D
+min-height calc(100vh - 2rem)
+border none
+outline none
 
-#code display
-pt = 0
-pb= 0
+git commit
+new view
+_buttons.ejs
 
-.line number
-color #7D7D7D
-font fam monospace
-text align end
+in new in form <%- include("_buttons.ejs)
