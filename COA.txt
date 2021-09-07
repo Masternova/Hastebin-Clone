@@ -1,60 +1,37 @@
 
-_buttons
-.button-wrapper
-    ahref / .logo Hastebin
-    .buttons
-        button.btn type = submit>save
- 
- css
- .buttons-wrapper
- pos fixed
- top 0
- right 0
- opacity .15
- transition opacity 200ms ease in outline
- bg #0081A2
- padd 1rem
 
- .buttons-wrapper:hover
- opacity 1
+to read post>
+app.use(express.urlencoded({extended: true}))
 
- .logo
- font size 2rem
- text align center
- text dec none
- color white
- width 100%
- display inline-block
+app post /save
+const value = req.body.value
+log value(test)
 
- .logo: hover
- text-dec underline
+commit
 
- .buttons {
-     display flex
-     mt .5rem
-     just content center
- }
+req mongoose
+mong.connect mongodb://localhost/Hastebin, {include error instructions}
 
- .buttons > * + * {
-     ml .25rem
- }
+mkdir models>documents.js
 
- .btn
- cursor pointer
- bg none
- border 1px solid #002b36
- color #002b36
- border rad .25rem
- padd .25rem .5rem
- transition bg color 200ms ease in outline
-display inline-block
-text dec none
+req mongoose
 
- btn hover
- bgcolor 83e5ff
+const docscheme = new mongoose.Scheme
+value{
+    type String
+    req true
+}
 
- _buttons
- ahref /new .btn>new
- (submit btn)
+module.exports = mongoose.model("Document", docscheme)
 
- commit
+server>
+const doc = req document('./models/doc)
+
+recon await/async
+
+32:25
+
+connect db
+connect to post w/try/catch/await
+
+new get route w/dynamic param
