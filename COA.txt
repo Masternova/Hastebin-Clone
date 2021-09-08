@@ -1,29 +1,4 @@
-
-
-to read post>
-app.use(express.urlencoded({extended: true}))
-
-app post /save
-const value = req.body.value
-log value(test)
-
-commit
-
-req mongoose
-mong.connect mongodb://localhost/Hastebin, {include error instructions}
-
-mkdir models>documents.js
-
-req mongoose
-
-const docscheme = new mongoose.Scheme
-value{
-    type String
-    req true
-}
-
-module.exports = mongoose.model("Document", docscheme)
-
+Add Document model and /save creating new document
 server>
 const doc = req document('./models/doc)
 

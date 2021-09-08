@@ -1,11 +1,18 @@
 const express = require("express");
+const mongoose = require("mongoose");
+
+const port = 3000;
+const dbUrl = "mongodb://localhost/hastebin";
+
 const app = express();
+
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-const port = 3000;
+const Document = require("./models/Documents");
+mongoose.connect(dbUrl, {});
 
 app.get("/", (req, res) => {
   const code = `Welcome to Hastebin!
@@ -20,9 +27,15 @@ app.get("/new", (req, res) => {
   res.render("new");
 });
 
-app.post("/save", (req, res) => {
+app.post("/save", async (req, res) => {
   const value = req.body.value;
-  console.log(value);
+
+  try {
+    const document = await Document.create({ value });
+    res.redirect(`/${document.id}`);
+  } catch (error) {
+    res.render("new", { value });
+  }
 });
 
 app.listen(port);
