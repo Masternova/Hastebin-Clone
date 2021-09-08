@@ -38,4 +38,14 @@ app.post("/save", async (req, res) => {
   }
 });
 
+app.get("/:id", async (req, res) => {
+  const id = req.params.id;
+  try {
+    const document = await Document.findById(id);
+    res.render("code-display", { code: document.value });
+  } catch (e) {
+    res.redirect("/");
+  }
+});
+
 app.listen(port);
