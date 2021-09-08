@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 Use the command in the top right corner 
 to create a new file to share with others.`;
 
-  res.render("code-display", { code });
+  res.render("code-display", { code, language: "plaintext" });
 });
 
 app.get("/new", (req, res) => {
