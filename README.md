@@ -1,3 +1,3 @@
 In this directory, run this
 
-> docker build --tag="Hastebin:1.0.0" .
+> docker build --tag="hastebin:1.0.0" .
