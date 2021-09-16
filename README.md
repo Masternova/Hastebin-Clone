@@ -1,3 +1,3 @@
-In powershell run this
+In this directory, run this
 
-> docker build --name hastebin .
+> docker build --tag="Hastebin:1.0.0" .
