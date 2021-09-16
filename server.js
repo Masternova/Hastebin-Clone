@@ -1,8 +1,9 @@
+require('dotenv').config();   
 const express = require("express");
 const mongoose = require("mongoose");
 
-const port = 3000;
-const dbUrl = "mongodb://localhost/hastebin";
+const port = process.env.PORT;
+const dbUrl = process.env.MONGODBURL;
 
 const app = express();
 
