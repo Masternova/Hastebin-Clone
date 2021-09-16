@@ -13,7 +13,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
 const Document = require("./models/Documents");
-mongoose.connect(dbUrl, {});
+mongoose.connect(dbUrl, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+});
 
 app.get("/", (req, res) => {
   const code = `Welcome to Hastebin!
